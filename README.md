@@ -1,3 +1,3 @@
 # YOUTUBE CLONING
 
-Cloning Youtube with Vanilla and Node JS
+Cloning Youtube with Vanilla and Node JS "WeTube"
