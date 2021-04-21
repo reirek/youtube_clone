@@ -10,7 +10,12 @@ import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
 const app = express();
 
-app.use(helmet());
+app.use(function(req, res, next){
+    res.setHeader("Content-Security-Policy", "script-src'self' http://commondatastorage.googleapis.com");
+    return next();
+});
+
+// app.use(helmet());
 app.set("view engine", "pug"); //set engin을 pug로
 app.use(cookieParser()); // cookie를 파싱하고
 app.use(bodyParser.json()); //body에 담긴 정보를 파싱함
